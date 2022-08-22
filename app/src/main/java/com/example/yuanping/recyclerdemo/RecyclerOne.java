@@ -44,6 +44,10 @@ public class RecyclerOne extends AppCompatActivity {
                         Log.d("@HusterYP", String.valueOf("onInterceptTouchEvent  UP"));
                         break;
                     }
+                    case MotionEvent.ACTION_CANCEL: {
+                        Log.d("@HusterYP", String.valueOf("onInterceptTouchEvent  CANCEL"));
+                        break;
+                    }
                 }
                 return true;
             }
@@ -51,12 +55,20 @@ public class RecyclerOne extends AppCompatActivity {
             @Override
             public void onTouchEvent(RecyclerView rv, MotionEvent e) {
                 switch (e.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        Log.d("@HusterYP", String.valueOf("onTouchEvent DOWN"));
+                        break;
+                    }
                     case MotionEvent.ACTION_MOVE: {
                         Log.d("@HusterYP", String.valueOf("onTouchEvent MOVE"));
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
                         Log.d("@HusterYP", String.valueOf("onTouchEvent UP"));
+                        break;
+                    }
+                    case MotionEvent.ACTION_CANCEL: {
+                        Log.d("@HusterYP", String.valueOf("onInterceptTouchEvent  CANCEL"));
                         break;
                     }
                 }
